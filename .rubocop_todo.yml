@@ -63,3 +63,4 @@ AllCops:
     - 'config/initializers/pagy.rb'
     - 'db/seeds/**/*'
     - 'test/**/*'
+    - 'spec/**/*'
