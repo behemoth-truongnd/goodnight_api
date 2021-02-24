@@ -18,7 +18,7 @@ module Api
     end
 
     def current_user
-      @current_user ||= User.find(params[:user_id])
+      @current_user ||= User.first
     end
 
     private
