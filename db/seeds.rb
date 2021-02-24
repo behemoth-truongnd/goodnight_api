@@ -28,7 +28,7 @@ puts "TimeTrack Creating..."
 user_ids.each do |user_id|
   time_tracks = 5.times.map do |i|
     sleep_at = Time.current.beginning_of_day - (i + 1).days + (20..23).to_a.sample.hours + (0..60).to_a.sample.minutes
-    { user_id: user_ids, sleep_at: sleep_at, wakeup_at: sleep_at + (7..9).to_a.sample.hours + (0..60).to_a.sample.minutes }
+    { user_id: user_id, sleep_at: sleep_at, wakeup_at: sleep_at + (7..9).to_a.sample.hours + (0..60).to_a.sample.minutes }
   end
   TimeTrack.import time_tracks
 end

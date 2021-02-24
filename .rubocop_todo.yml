@@ -60,5 +60,6 @@ AllCops:
     - 'db/*.rb'
     - 'bin/**/*'
     - 'config/initializers/devise.rb'
+    - 'config/initializers/pagy.rb'
     - 'db/seeds/**/*'
     - 'test/**/*'
