@@ -4,7 +4,7 @@ class TimeTrack < ApplicationRecord
   scope :created_desc, -> { order(created_at: :desc) }
 
   def sleep_time
-    return if wakeup_at.blank? && sleep_at.blank?
+    return if wakeup_at.blank? || sleep_at.blank?
 
     total_seconds = wakeup_at - sleep_at
     seconds = total_seconds % 60
