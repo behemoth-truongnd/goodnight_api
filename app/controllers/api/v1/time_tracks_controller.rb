@@ -4,7 +4,7 @@ module Api
       before_action :build_time_track, only: :create
 
       def index
-        @pagy, @records = pagy(current_user.time_tracks.created_desc)
+        @pagy, @records = pagy(current_user.time_tracks.created_desc, items: DEFAULT_MAX_ITEM_PAGINATION)
         render json: TimeTrackSerializer.new(@records).serialized_json
       end
 

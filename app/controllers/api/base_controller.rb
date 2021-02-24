@@ -1,6 +1,7 @@
 module Api
   class BaseController < ::ApplicationController
     include Pagy::Backend
+    DEFAULT_MAX_ITEM_PAGINATION = 20
     after_action :set_pagy_headers
 
     rescue_from ActionController::RoutingError, with: :render404
